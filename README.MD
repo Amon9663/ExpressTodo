@@ -1,4 +1,4 @@
-run the following commands in the project directory
+run the following commands in the project directory:
 
 npm install  axios --save 
 
