@@ -10,6 +10,7 @@ module.exports = function(app){
 
 
     app.route('/tasks/:taskId')
+        .get(todoList.list_task)
         .put(todoList.update_task)
         .delete(todoList.delete_task);
 

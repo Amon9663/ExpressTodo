@@ -10,6 +10,14 @@ var mongoose = require('mongoose'),
         });
     };
 
+    exports.list_task = function (req, res){
+        Task.findById(req.params.taskId, function (err, task){
+            if (err)
+                res.send(err);
+            res.json(task);
+        });
+    };
+
     exports.create_task = function (req, res){
 
         var new_task = new Task(req.body);
